@@ -1,4 +1,4 @@
-const styles = {
+export const styles = {
   boxWidth: "xl:max-w-[1280px] w-full",
 
   heading2:
@@ -26,4 +26,10 @@ export const layout = {
   sectionInfo: `flex-1 ${styles.flexStart} flex-col`,
 };
 
-export default styles;
+// export const heroStyle = {
+//   backgroundImage: `url(https://media.giphy.com/media/PkKzNQjwPy7GvxZbfe/giphy.gif)`,
+//   backgroundSize: "cover",
+//   backgroundPosition: "center",
+//   height: "100vh",
+//   width: "100vw",
+// };
