@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { navLinks } from "../constants";
 import AstroMet_Logo from "../assets/logo/ASTROMET white_074730.png";
-import { IconMenu2 } from "@tabler/icons-react";
-import { IconX } from "@tabler/icons-react";
+import { IconMenu2, IconX, IconChevronDown } from "@tabler/icons-react";
 
 export default function Navbar() {
   const [activeSubMenuId, setActiveSubMenuId] = useState(null);
@@ -73,8 +72,8 @@ export default function Navbar() {
                     pointerEvents: activeSubMenuId === nav.id ? "auto" : "none",
                   }}
                 >
-                  <span className="w-full h-full relative z-2">
-                    {nav.title}
+                  <span className="w-full h-full relative z-2c flex items-center">
+                    {nav.title} <IconChevronDown />
                   </span>
                 </div>
               ) : (
