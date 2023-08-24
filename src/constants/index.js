@@ -24,6 +24,12 @@ export const navLinks = [
   { id: "Login", title: "Iniciar Sesión" },
 ];
 
+// TODO: Modificables:
+export const targetDate = new Date("2023-10-14T12:00:00").getTime();
+
+import imageMission from "../assets/img/imageMission.png";
+import imageVission from "../assets/img/imageVission.png";
+
 export const information = [
   {
     id: "history",
@@ -40,12 +46,14 @@ export const information = [
   {
     id: "mission",
     title: "Misión",
+    image: imageMission,
     paragraph:
       "La misión del Instituto de Astronomía (IA) es impulsar el desarrollo de la astrofísica en México a través de la realización de investigación original e innovadora con impacto internacional, el diseño y construcción de instrumentación astronómica con tecnología de punta, así como la formación de recursos humanos con estándares mundiales y la divulgación científica de excelencia.",
   },
   {
     id: "vission",
     title: "Visión",
+    image: imageVission,
     paragraph:
       "Mantener una posición de liderazgo nacional e internacional en investigación de frontera en astrofísica, el desarrollo de instrumentación astronómica con tecnología de punta, y generar proyectos de gran envergadura que pongan a nuestros observatorios dentro del marco competitivo internacional, en beneficio del desarrollo científico y tecnológico del país.",
   },

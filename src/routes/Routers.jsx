@@ -7,6 +7,7 @@ import Courses from "../pages/Courses";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function Routers() {
   return (
@@ -21,6 +22,7 @@ export default function Routers() {
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

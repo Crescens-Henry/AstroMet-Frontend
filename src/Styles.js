@@ -25,11 +25,3 @@ export const layout = {
 
   sectionInfo: `flex-1 ${styles.flexStart} flex-col`,
 };
-
-// export const heroStyle = {
-//   backgroundImage: `url(https://media.giphy.com/media/PkKzNQjwPy7GvxZbfe/giphy.gif)`,
-//   backgroundSize: "cover",
-//   backgroundPosition: "center",
-//   height: "100vh",
-//   width: "100vw",
-// };
