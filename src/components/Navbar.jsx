@@ -25,7 +25,7 @@ export default function Navbar() {
 
   return (
     <div
-      className={`w-full py-2 md:flex md:justify-between md:items-center navbar font-Roboto  flex-nowrap fixed z-20 bg-black opacity-80`}
+      className={`w-full py-2 md:flex md:justify-between md:items-center navbar font-Roboto  flex-nowrap fixed z-20 bg-black opacity-90`}
     >
       <div className="flex justify-between items-center">
         <img
@@ -33,7 +33,7 @@ export default function Navbar() {
           alt="AstroMet-Logo"
           className="h-[40px]  inline mx-10"
         />
-        {mobileMenuOpen ? ( // Mostrar botón de cierre si el menú está abierto
+        {mobileMenuOpen ? (
           <IconX
             size={36}
             stroke={3}
@@ -42,7 +42,6 @@ export default function Navbar() {
             onClick={handleMobileMenuClick}
           />
         ) : (
-          // Mostrar botón de menú si el menú está cerrado
           <IconMenu2
             size={36}
             stroke={3}
@@ -78,7 +77,7 @@ export default function Navbar() {
                   }}
                 >
                   <span
-                    className="w-full h-full relative z-20 flex items-center" // Cambia z-2c a z-20
+                    className="w-full h-full relative z-20 flex items-center"
                     onClick={() =>
                       animateScroll.scrollTo(nav.id, {
                         smooth: true,
@@ -89,7 +88,7 @@ export default function Navbar() {
                     {nav.title} <IconChevronDown />
                   </span>
                 </div>
-              ) : location.pathname === "/" ? ( // Comprueba si estás en la página de inicio
+              ) : location.pathname === "/" ? (
                 <ScrollLink
                   to={nav.id}
                   smooth={true}
@@ -108,9 +107,8 @@ export default function Navbar() {
                 </RouterLink>
               )}
               {nav.subLinks && activeSubMenuId === nav.id && (
-                <ul className="md:absolute top-full mt-2 py-2 px-8 bg-black opacity-80 shadow-md">
+                <ul className="md:absolute top-full mt-2 py-2 px-8 bg-black opacity-100 shadow-md">
                   {" "}
-                  {/* Aumentar el mt-2 a mt-4 */}
                   {nav.subLinks.map((subLink) => (
                     <li key={subLink.id}>
                       {location.pathname === "/" ? (
@@ -119,7 +117,7 @@ export default function Navbar() {
                           smooth={true}
                           duration={500}
                           offset={-70}
-                          className="text-[#ffff] w-full block" // Cambiar a 'block' para ocupar todo el ancho
+                          className="text-[#ffff] w-full block"
                         >
                           <span className="w-full h-full relative z-2 text-base my-4 hover:text-[#00CAC8] leading-loose">
                             {subLink.title}
@@ -128,7 +126,7 @@ export default function Navbar() {
                       ) : (
                         <RouterLink
                           to={subLink.id}
-                          className="text-[#ffff] w-full block" // Cambiar a 'block' para ocupar todo el ancho
+                          className="text-[#ffff] w-full block"
                         >
                           <span className="w-full h-full relative z-2 text-base my-4 hover:text-[#00CAC8] leading-loose">
                             {subLink.title}

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 export const Timer = ({ targetDate }) => {
   const [timeLeft, setTimeLeft] = useState(getTimeLeft(targetDate));
 

@@ -1,10 +1,9 @@
 import React from "react";
 import { styles } from "../Styles";
 import { Timer } from "./Timer";
+import { targetDate } from "../constants";
 
 export default function ContentHero() {
-  const targetDate = new Date("2023-10-14T12:00:00").getTime();
-
   return (
     <div className={`${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>

@@ -62,3 +62,7 @@ button:hover svg {
 button:hover span {
   transform: translateX(7px);
 }
+
+.containerImg {
+  background: linear-gradient(88deg, #000 14.78%, rgba(0, 0, 0, 0) 100%);
+}

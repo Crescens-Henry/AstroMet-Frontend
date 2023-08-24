@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import FormTutor from "./FormTutor";
+import { Link } from "react-router-dom";
 
 export default function RegisterForm() {
   const [age, setAge] = useState("");
@@ -186,7 +187,7 @@ export default function RegisterForm() {
                 ¿Ya tienes una cuenta?
               </label>
               <span className="text-[#60CBD3] ml-2 cursor-pointer hover:text-[#34A5AD] duration-300">
-                Iniciar sesion
+                <Link to={"/Login"}>Iniciar sesion</Link>
               </span>
             </div>
           </div>
