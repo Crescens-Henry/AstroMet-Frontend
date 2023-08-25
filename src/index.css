@@ -5,13 +5,11 @@
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  scroll-behavior: smooth;
 }
 * {
   margin: 0;
   box-sizing: border-box;
   padding: 0;
-  scroll-behavior: smooth;
 }
 body {
   background: #000000;
@@ -65,4 +63,18 @@ button:hover span {
 
 .containerImg {
   background: linear-gradient(88deg, #000 14.78%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* propeties scrollbar */
+body::-webkit-scrollbar {
+  width: 10px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: black; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #00cac8; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
 }

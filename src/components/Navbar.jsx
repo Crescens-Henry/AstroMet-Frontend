@@ -3,7 +3,7 @@ import { navLinks } from "../constants";
 import AstroMet_Logo from "../assets/logo/ASTROMET white_074730.png";
 import { IconMenu2, IconX, IconChevronDown } from "@tabler/icons-react";
 import { Link as RouterLink, useLocation } from "react-router-dom";
-import { Link as ScrollLink, animateScroll } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 
 export default function Navbar() {
   const location = useLocation();
@@ -76,15 +76,7 @@ export default function Navbar() {
                     pointerEvents: activeSubMenuId === nav.id ? "auto" : "none",
                   }}
                 >
-                  <span
-                    className="w-full h-full relative z-20 flex items-center"
-                    onClick={() =>
-                      animateScroll.scrollTo(nav.id, {
-                        smooth: true,
-                        offset: -70,
-                      })
-                    }
-                  >
+                  <span className="w-full h-full relative z-20 flex items-center">
                     {nav.title} <IconChevronDown />
                   </span>
                 </div>
@@ -92,8 +84,6 @@ export default function Navbar() {
                 <ScrollLink
                   to={nav.id}
                   smooth={true}
-                  duration={500}
-                  offset={-70}
                   className="block w-full h-full p-2"
                 >
                   <span className=" w-full h-full z-2">{nav.title}</span>
@@ -108,15 +98,14 @@ export default function Navbar() {
               )}
               {nav.subLinks && activeSubMenuId === nav.id && (
                 <ul className="md:absolute top-full mt-2 py-2 px-8 bg-black opacity-100 shadow-md">
-                  {" "}
                   {nav.subLinks.map((subLink) => (
                     <li key={subLink.id}>
-                      {location.pathname === "/" ? (
+                      {location.pathname.includes(nav.id) &&
+                      location.pathname.includes(subLink.id) ? (
                         <ScrollLink
-                          to={subLink.id}
+                          to={`${nav.id}`}
                           smooth={true}
-                          duration={500}
-                          offset={-70}
+                          duration={1000}
                           className="text-[#ffff] w-full block"
                         >
                           <span className="w-full h-full relative z-2 text-base my-4 hover:text-[#00CAC8] leading-loose">
