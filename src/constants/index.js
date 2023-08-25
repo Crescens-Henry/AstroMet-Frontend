@@ -25,6 +25,9 @@ export const navLinks = [
 ];
 
 // TODO: Modificables:
+export const instagramLink = "https://www.instagram.com/";
+export const facebookLink = "https://www.facebook.com";
+
 export const targetDate = new Date("2023-10-14T12:00:00").getTime();
 
 import imageMission from "../assets/img/imageMission.png";
