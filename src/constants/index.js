@@ -61,3 +61,56 @@ export const information = [
       "Mantener una posición de liderazgo nacional e internacional en investigación de frontera en astrofísica, el desarrollo de instrumentación astronómica con tecnología de punta, y generar proyectos de gran envergadura que pongan a nuestros observatorios dentro del marco competitivo internacional, en beneficio del desarrollo científico y tecnológico del país.",
   },
 ];
+
+import img1 from "../assets/img/prueba.jpg";
+export const courseCard = [
+  {
+    id: "cuourse1",
+    image: img1,
+    name: "Curso1",
+    url: "https://github.com/Crescens-Henry",
+    description: "Aprende sobre un poco como armar tu propio telescopio.",
+  },
+  {
+    id: "cuourse2",
+    image: img1,
+    name: "Curso 2",
+    url: "https://github.com/Crescens-Henry",
+    description: "Aprende sobre un poco como armar tu propio telescopio.",
+  },
+  {
+    id: "cuourse3",
+    image: img1,
+    name: "Curso3",
+    url: "https://github.com/Crescens-Henry",
+    description: "Aprende sobre un poco como armar tu propio telescopio.",
+  },
+  {
+    id: "cuourse4",
+    image: img1,
+    name: "Curso 4",
+    url: "https://github.com/Crescens-Henry",
+    description: "Aprende sobre un poco como armar tu propio telescopio.",
+  },
+  {
+    id: "cuourse5",
+    image: img1,
+    name: "Curso 5",
+    url: "https://github.com/Crescens-Henry",
+    description: "Aprende sobre un poco como armar tu propio telescopio.",
+  },
+  {
+    id: "cuourse6",
+    image: img1,
+    name: "Curso 6",
+    url: "https://github.com/Crescens-Henry",
+    description: "Aprende sobre un poco como armar tu propio telescopio.",
+  },
+  {
+    id: "cuourse7",
+    image: img1,
+    name: "Curso 7",
+    url: "https://github.com/Crescens-Henry",
+    description: "Aprende sobre un poco como armar tu propio telescopio.",
+  },
+];
