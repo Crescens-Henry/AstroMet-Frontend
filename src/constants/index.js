@@ -21,8 +21,9 @@ export const navLinks = [
   },
   { id: "Store", title: "Tienda" },
   { id: "Courses", title: "Cursos" },
-  { id: "Login", title: "Iniciar Sesión" },
+  { id: "Login", title: "Iniciar sesion" },
 ];
+export const defaultUserName = "Iniciar Sesión";
 
 // TODO: Modificables:
 export const instagramLink = "https://www.instagram.com/";
