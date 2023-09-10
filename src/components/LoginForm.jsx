@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useUser } from "../context/UserContext";
 
 export default function LoginForm() {
   const navigate = useNavigate();
+  const { setUser } = useUser();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -25,6 +28,7 @@ export default function LoginForm() {
       .post("http://localhost:8080/user/sign-in", user)
       .then((response) => {
         console.log(response);
+        setUser(response.data.data.name);
         navigate("/home");
       })
       .catch((err) => {

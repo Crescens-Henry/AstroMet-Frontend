@@ -1,15 +1,24 @@
 import React, { useState } from "react";
-import { navLinks } from "../constants";
+import { navLinks, defaultUserName } from "../constants";
 import AstroMet_Logo from "../assets/logo/ASTROMET white_074730.png";
 import { IconMenu2, IconX, IconChevronDown } from "@tabler/icons-react";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
+import { useUser } from "../context/UserContext";
 
 export default function Navbar() {
   const location = useLocation();
+  const { user } = useUser();
 
   const [activeSubMenuId, setActiveSubMenuId] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Crear una nueva matriz de enlaces actualizados
+  const updatedNavLinks = navLinks.map((link) =>
+    link.id === "Login"
+      ? { ...link, title: user ? user : defaultUserName }
+      : link
+  );
 
   const handleSubMenuClick = (subLinkId) => {
     if (activeSubMenuId === subLinkId) {
@@ -58,7 +67,7 @@ export default function Navbar() {
             : "top-[-400px] opacity-0"
         } transition-all ease-in duration-700`}
       >
-        {navLinks.map((nav, index) => (
+        {updatedNavLinks.map((nav, index) => (
           <li
             key={nav.id}
             style={{ whiteSpace: "nowrap" }}
